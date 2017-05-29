@@ -75,12 +75,12 @@
                 <div>
                     <label class="input-group">Doğru Cevap Seç</label>
                     @Html.DropDownListFor(x => x.Cevap1, new SelectList(new List<SelectListItem> {
-                                              new SelectListItem {Value="Cevap1A",Text="A"},
-                                              new SelectListItem {Value="Cevap1B",Text="B"},
-                                              new SelectListItem {Value="Cevap1C",Text="C"},
-                                              new SelectListItem {Value="Cevap1D",Text="D"},
+                                              new SelectListItem() {Value="Cevap1A",Text="A"},
+                                              new SelectListItem() {Value="Cevap1B",Text="B"},
+                                              new SelectListItem() {Value="Cevap1C",Text="C"},
+                                              new SelectListItem() {Value="Cevap1D",Text="D"},
                                           },
-                            "Value", "Text", "Cevap1A"), new { @class = "form-control" })
+                            "Value", "Text", "Cevap3A"), new { @class = "form-control" })
                     <!-- select list-->
                 </div>
             </div>
@@ -127,8 +127,9 @@
                                               new SelectListItem {Value="Cevap2A",Text="A"},
                                               new SelectListItem {Value="Cevap2B",Text="B"},
                                               new SelectListItem {Value="Cevap2C",Text="C"},
-                                              new SelectListItem {Value="Cevap2D",Text="D"}},
-                            "Value", "Text", "Cevap2A"))
+                                              new SelectListItem {Value="Cevap2D",Text="D"}
+                            },
+                            "Value", "Text", "Cevap3A"), new { @class = "form-control" })
                     <!-- select list-->
                 </div>
             </div>

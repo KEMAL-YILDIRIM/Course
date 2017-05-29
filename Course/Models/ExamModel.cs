@@ -17,10 +17,10 @@ namespace Course.Models
 
         public List<ArticlesModel> Konular { get; set; }
 
-        public SelectListItem Cevap1 { get; set; }
-        public SelectListItem Cevap2 { get; set; }
-        public SelectListItem Cevap3 { get; set; }
-        public SelectListItem Cevap4 { get; set; }
+        public string Cevap1 { get; set; }
+        public string Cevap2 { get; set; }
+        public string Cevap3 { get; set; }
+        public string Cevap4 { get; set; }
 
 
         public string Soru1 { get; set; }

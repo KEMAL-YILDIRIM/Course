@@ -61,8 +61,6 @@
             data: { id: $("#SinavID").val() },
             dataType: "json",
             success: function (data) {
-                //var sam = data.Cevap1;
-                //alert(sam);
                 for (var i = 1; i <= 4; i++) {
                     var bir = 'Cevap' + i + '_clickedId';
                     var iki = 'data.Cevap' + i;
