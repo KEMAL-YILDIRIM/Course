@@ -1,0 +1,181 @@
+﻿@{
+    ViewBag.Title = "Sinav";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+@model Course.Data.Exam
+@section scripts{
+<script type="text/javascript" src="~/Scripts/user.js"></script>
+}
+
+
+@Html.AntiForgeryToken()
+
+
+@Html.ActionLink("Sonraki", "Next", "User", new { @Model.Id }, new { @class = "btn btn-link" })
+<span class="glyphicon glyphicon-arrow-right">
+</span>
+<div class="center-block">
+    <div class="col-lg-6">
+        <div>
+            @Html.LabelFor(t => t.Baslik, Model.Baslik, new { @class = "form-control" })
+        </div>
+        <div>
+            @Html.TextAreaFor(x => x.Icerik, new { @id = "icerik", @class = "well well-lg" })
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Soru 1</span>
+                        @Html.LabelFor(x => x.Soru1, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                    </div>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">A)</span>
+                            @Html.LabelFor(x => x.Cevap1A, new { @class = "form-control cevap1", @id = "cevap1A", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">B)</span>
+                            @Html.LabelFor(x => x.Cevap1B, new { @class = "form-control cevap1", @id = "cevap1B", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">C)</span>
+                            @Html.LabelFor(x => x.Cevap1C, new { @class = "form-control cevap1", @id = "cevap1C", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">D)</span>
+                            @Html.LabelFor(x => x.Cevap1D, new { @class = "form-control cevap1", @id = "cevap1D", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Soru 2</span>
+                        @Html.LabelFor(x => x.Soru2, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                    </div>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">A)</span>
+                            @Html.LabelFor(x => x.Cevap2A, new { @class = "form-control cevap2", @id = "cevap2A", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">B)</span>
+                            @Html.LabelFor(x => x.Cevap2B, new { @class = "form-control cevap2", @id = "cevap2B", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">C)</span>
+                            @Html.LabelFor(x => x.Cevap2C, new { @class = "form-control cevap2", @id = "cevap2C", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">D)</span>
+                            @Html.LabelFor(x => x.Cevap2D, new { @class = "form-control cevap2", @id = "cevap2D", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Soru 3</span>
+                        @Html.LabelFor(x => x.Soru3, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                    </div>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">A)</span>
+                            @Html.LabelFor(x => x.Cevap3A, new { @class = "form-control cevap3", @id = "cevap3A", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">B)</span>
+                            @Html.LabelFor(x => x.Cevap3B, new { @class = "form-control cevap3", @id = "cevap3B", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">C)</span>
+                            @Html.LabelFor(x => x.Cevap3C, new { @class = "form-control cevap3", @id = "cevap3C", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">D)</span>
+                            @Html.LabelFor(x => x.Cevap3D, new { @class = "form-control cevap3", @id = "cevap3D", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Soru 4</span>
+                        @Html.LabelFor(x => x.Soru2, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                    </div>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">A)</span>
+                            @Html.LabelFor(x => x.Cevap4A, new { @class = "form-control cevap4", @id = "cevap4A", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">B)</span>
+                            @Html.LabelFor(x => x.Cevap4B, new { @class = "form-control cevap4", @id = "cevap4B", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">C)</span>
+                            @Html.LabelFor(x => x.Cevap4C, new { @class = "form-control cevap4", @id = "cevap4C", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">D)</span>
+                            @Html.LabelFor(x => x.Cevap4D, new { @class = "form-control cevap4", @id = "cevap4D", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            @Html.HiddenFor(a=>a.Id,new { @val = Model.Id , @id = "SinavID" })
+            <input type="button" id="tamamla" value="SINAVI TAMAMLA" />
+        </div>
+    </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->

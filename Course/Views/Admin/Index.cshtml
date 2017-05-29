@@ -1,0 +1,239 @@
+﻿@model Course.Models.ExamModel
+@using Course.Models
+
+@{
+    ViewBag.Title = "Olustur";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<span class="glyphicon glyphicon-arrow-left">
+    @Html.ActionLink("Liste", "List", "Admin")
+</span>
+@using (Html.BeginForm("Index", "Admin"))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="center-block">
+        <div class="col-lg-6">
+            <div class="input-group">
+                @Html.TextBoxFor(t => t.Baslik, new { @class = "form-control", @placeholder = "" })
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-arrow-down"></span></button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        @if (Model.Konular != null)
+                        {
+                            foreach (ArticlesModel makale in Model.Konular)
+                            {
+                                <li>
+                                    @Html.ActionLink(@makale.Baslik, "GetContent", "Admin", makale, new { @class = "" })
+                                </li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div>
+                @Html.TextAreaFor(x => x.Icerik, new { @id = "icerik", @class = "well well-lg" })
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">Soru 1</span>
+                            @Html.TextBoxFor(x => x.Soru1, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">A)</span>
+                                @Html.TextBoxFor(x => x.Cevap1A, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">B)</span>
+                                @Html.TextBoxFor(x => x.Cevap1B, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">C)</span>
+                                @Html.TextBoxFor(x => x.Cevap1C, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">D)</span>
+                                @Html.TextBoxFor(x => x.Cevap1D, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div>
+                    <label class="input-group">Doğru Cevap Seç</label>
+                    @Html.DropDownListFor(x => x.Cevap1, new SelectList(new List<SelectListItem> {
+                                              new SelectListItem {Value="Cevap1A",Text="A"},
+                                              new SelectListItem {Value="Cevap1B",Text="B"},
+                                              new SelectListItem {Value="Cevap1C",Text="C"},
+                                              new SelectListItem {Value="Cevap1D",Text="D"},
+                                          },
+                            "Value", "Text", "Cevap1A"), new { @class = "form-control" })
+                    <!-- select list-->
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">Soru 2</span>
+                            @Html.TextBoxFor(x => x.Soru2, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">A)</span>
+                                @Html.TextBoxFor(x => x.Cevap2A, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">B)</span>
+                                @Html.TextBoxFor(x => x.Cevap2B, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">C)</span>
+                                @Html.TextBoxFor(x => x.Cevap2C, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">D)</span>
+                                @Html.TextBoxFor(x => x.Cevap2D, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div>
+                    <label class="input-group">Doğru Cevap Seç</label>
+                    @Html.DropDownListFor(x => x.Cevap2, new SelectList(new List<SelectListItem>{
+                                              new SelectListItem {Value="Cevap2A",Text="A"},
+                                              new SelectListItem {Value="Cevap2B",Text="B"},
+                                              new SelectListItem {Value="Cevap2C",Text="C"},
+                                              new SelectListItem {Value="Cevap2D",Text="D"}},
+                            "Value", "Text", "Cevap2A"))
+                    <!-- select list-->
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">Soru 3</span>
+                            @Html.TextBoxFor(x => x.Soru3, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">A)</span>
+                                @Html.TextBoxFor(x => x.Cevap3A, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">B)</span>
+                                @Html.TextBoxFor(x => x.Cevap3B, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">C)</span>
+                                @Html.TextBoxFor(x => x.Cevap3C, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">D)</span>
+                                @Html.TextBoxFor(x => x.Cevap3D, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div>
+                    <label class="input-group">Doğru Cevap Seç</label>
+                    @Html.DropDownListFor(x => x.Cevap3, new SelectList(new List<SelectListItem> {
+                                              new SelectListItem {Value="Cevap3A",Text="A"},
+                                              new SelectListItem {Value="Cevap3B",Text="B"},
+                                              new SelectListItem {Value="Cevap3C",Text="C"},
+                                              new SelectListItem {Value="Cevap3D",Text="D"},
+                                          },
+                            "Value", "Text", "Cevap3A"), new { @class = "form-control" })
+                    <!-- select list-->
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">Soru 4</span>
+                            @Html.TextBoxFor(x => x.Soru2, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                        </div>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">A)</span>
+                                @Html.TextBoxFor(x => x.Cevap4A, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">B)</span>
+                                @Html.TextBoxFor(x => x.Cevap4B, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">C)</span>
+                                @Html.TextBoxFor(x => x.Cevap4C, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">D)</span>
+                                @Html.TextBoxFor(x => x.Cevap4D, new { @class = "form-control", @aria_describedby = "basic-addon1" })
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                @{Model.Tarih = DateTime.Now; }
+                @Html.HiddenFor(a => a.Tarih)
+                <div>
+                    <label class="input-group">Doğru Cevap Seç</label>
+                    @Html.DropDownListFor(x => x.Cevap4, new SelectList(new List<SelectListItem> {
+                                              new SelectListItem {Value="Cevap4A",Text="A"},
+                                              new SelectListItem {Value="Cevap4B",Text="B"},
+                                              new SelectListItem {Value="Cevap4C",Text="C"},
+                                              new SelectListItem {Value="Cevap4D",Text="D"},
+                                          },
+                            "Value", "Text", "Cevap4A"), new { @class = "form-control" })
+                    <!-- select list-->
+                </div>
+                <input type="submit" value="SINAV OLUŞTUR" />
+            </div>
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+
+                    }
