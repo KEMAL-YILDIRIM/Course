@@ -1,0 +1,61 @@
+-oncelikle istenilene en yakin program ornegi aramaliyim mesela burada (survey) aramaliydim
+
+-login paneli identity owen ve filter ile gelistirilebilir
+-database design codefirst olarak yapildi gerek olmadigi icin iliski eklemedim 
+makale, soru, kullanici rolu, sinavlar seklinde daha bircok tabloya sahip olabilir
+cunki cok kullanicili ve kullanici panelli bir uygulamada bunlar gerekir hatta daha sonra sinav istatistikleri
+ortaya koyulur analiz vb yapilabilir.
+
+-https://stackoverflow.com/questions/16642196/get-html-code-from-website-in-c-sharp
+-http://itgroove.net/mmman/2013/03/21/how-to-pull-content-via-jquery-from-another-web-site-cross-domain-and-do-it-in-sharepoint-too/
+-https://www.codeproject.com/Articles/1041115/Webscraping-with-Csharp
+-https://stackoverflow.com/questions/43392650/trying-to-get-links-from-an-rss-feed-with-syndicationitem
+-http://www.csharpdeveloping.net/Snippet/how_to_download_and_parse_rss_feed
+-http://www.anotherchris.net/csharp/simplified-csharp-atom-and-rss-feed-parser/
+-https://stackoverflow.com/questions/31631158/xmlreader-create-outputs-none
+-http://diranieh.com/NETXML/XmlReader
+-https://stackoverflow.com/questions/2973208/automatically-decompress-gzip-response-via-webclient-downloaddata?noredirect=1
+
+-o kadar kaynak aramasi yaparken linki degistirip test etmek aklima gelmedi 1 gun bosa gitti
+
+
+-cevap burada stream zaten break aninda bos oluyor daha sonra da decompress edilmesi gerekiyor ki xml e donussun
+
+-string baslik 50 hane oldugundan habire hata verdi sebebini bulmak icin save changes i override edip exception handling yapmam gerekti
+-html parse sorun oldugundan web clienti da override ettim
+
+-https://stackoverflow.com/questions/6728329/hexadecimal-value-0x1f-is-an-invalid-character-line-1-position-1
+
+-ikinci kisimda p elementinin icerigini almak var
+
+-https://stackoverflow.com/questions/12106280/remove-html-node-from-htmldocument-htmlagilitypack
+
+-https://stackoverflow.com/questions/4492217/extract-content-in-paragraph-tags
+-https://stackoverflow.com/questions/14961759/loading-html-string-using-htmlagilitypack
+
+-xpath i de ogrendikten sonra artik sirada ne varsa bakcaz
+
+-view dan action link metodunun overloadlarini kullanmak sikintili
+-https://www.codeproject.com/Questions/696829/MVC-Dropdown-onchange-load-another-dropdown
+-http://www.c-sharpcorner.com/UploadFile/3d39b4/getting-data-from-view-to-controller-in-mvc/
+
+-ajax dropdown
+-https://www.codeproject.com/Questions/696829/MVC-Dropdown-onchange-load-another-dropdown
+
+-json ajax
+-https://chsakell.com/2013/06/08/retrieve-json-data-from-mvc-controllers-in-asp-net-mvc/
+-https://stackoverflow.com/questions/25142325/getting-json-object-from-mvc-controller
+-https://stackoverflow.com/questions/28659322/asynchronous-task-in-asp-net-mvc-5
+-http://dotnetmentors.com/mvc/jquery-ajax-call-with-jsonresult-in-asp-net-mvc.aspx
+-https://www.aspsnippets.com/Articles/ASPNet-MVC-JsonResult-example-Return-JSON-data-from-Controller-to-View-in-ASPNet-MVC.aspx
+
+-aciklamali json manupulating
+-http://www.c-sharpcorner.com/UploadFile/2ed7ae/jsonresult-type-in-mvc/
+
+-json nesnelerine erisim
+-https://stackoverflow.com/questions/34136552/how-to-get-value-from-json-object-using-jquery
+
+-microsoft toollarini hala anlayamadim select list beni cildirtti
+-http://www.advancesharp.com/blog/1144/mvc-dropdown-binding-best-ways
+
+-Eger bir item gelmiyorsa once obje tipinde gonderip ne olarak geldigini kontrol etmelisin

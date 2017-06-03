@@ -95,8 +95,11 @@ namespace Course.Controllers
             string _url = makale.KonuUrl;
 
             HtmlWeb web = new HtmlWeb();
-            web.OverrideEncoding = Encoding.UTF8;
             HtmlDocument doc = web.Load(_url);
+
+            //var data = new ModifiedWebClient().DownloadString(_url);
+            //var doc = new HtmlDocument();
+            //doc.LoadHtml(data);
 
             var nodes = doc.DocumentNode.SelectNodes("//p");
 
